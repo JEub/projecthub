@@ -27,11 +27,17 @@ const getUser = () => {
 const user = getUser()
 
 export default [
+  // {
+  //   path: "/",
+  //   exact: true,
+  //   layout: DefaultLayout,
+  //   component: () => !user ? <Redirect to="/signin" /> : <Redirect to="/project-overview" />
+  // },
   {
     path: "/",
     exact: true,
     layout: DefaultLayout,
-    component: () => !user ? <Redirect to="/signin" /> : <Redirect to="/project-overview" />
+    component: Signin
   },
   {
     path: "/project-overview/:project",
