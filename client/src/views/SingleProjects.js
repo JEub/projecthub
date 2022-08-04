@@ -381,12 +381,17 @@ const SingleProjects = (props) => {
                   </div>
                 </div>
                 <CardBody>
-                  <h5 className="card-title">
+                  <p className="card-title">
                     <span className="text-fiord-blue">
                       {projects.short_desc}
                     </span>
                     <Button outline style={{ position: 'absolute', right: '1em', top: '14em' }} onClick={handleUpdateHeart}><i className="material-icons mr-1">thumb_up</i> Like</Button>
-                  </h5>
+                  </p>
+                  <p>
+                    <a href={`${projects.github_repo}`} className="text-fiord-blue" target="_blank" rel="noopener noreferrer">
+                      <strong>Github Repo: {projects.github_repo}</strong>
+                    </a>
+                  </p>
                   <div className="d-flex flex-column">
                     <p className="card-text d-inline-block mb-3"dangerouslySetInnerHTML={{ __html: projects.description }} />
 
